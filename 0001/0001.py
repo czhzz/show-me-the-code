@@ -13,7 +13,7 @@ def random_code(filename, num, length):
   for i in range(0, num):
     code = ''
     for j in range(0, length):
-      code += random.choice(string.ascii_letters + string.digits)
+      code += str(j)+random.choice(string.ascii_letters + string.digits)
       # code += chr(random.randint(65, 90))
     print(str(i+1) + ':' + code)
     file.write(code+'\n')
@@ -22,4 +22,4 @@ def random_code(filename, num, length):
 
 if __name__ == '__main__':
   filename = 'code.txt'
-  random_code(filename, 200, 20)
+  random_code(filename, 200, 10)
