@@ -1,9 +1,8 @@
 # NumPy模块
 
 ## 引用方式
-```
-import numpy
-```
+* 安装 `pip install numpy`
+* 引用 `import numpy`
 
 ## 简介
 
