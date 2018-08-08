@@ -1,5 +1,5 @@
-# 0015
-# 2018/08/07
+# 0016
+# 2018/08/08
 # 将txt内容写到excel中
 
 __author__ = 'czhzz'
@@ -15,16 +15,16 @@ def save_to_excel(filename):
   ws = wb.add_sheet('city')
   row = 0
   col = 0
-  print(file_content.items())
-  for k, v in sorted(file_content.items(),key=lambda d:d[0]):
-    ws.write(row, col, k)
-    col += 1
-    ws.write(row, col, v)
+
+  for i in file_content:
+    for j in i:
+      ws.write(row, col, j)
+      col += 1
     row += 1
     col = 0
 
-  wb.save('city.xls')
+  wb.save('numbers.xls')
 
 if __name__ == '__main__':
-  filename = 'city.txt'
+  filename = 'numbers.txt'
   save_to_excel(filename)
