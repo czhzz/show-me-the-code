@@ -12,7 +12,7 @@ def save_to_excel(filename):
   file_content = json.load(f)
   print(file_content)
   wb = xlwt.Workbook()
-  ws = wb.add_sheet('city')
+  ws = wb.add_sheet('numbers')
   row = 0
   col = 0
 
